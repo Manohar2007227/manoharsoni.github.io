@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/HP/Desktop/bca/Manohar/1.1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Manohar Soni — Portfolio</title>
+  <meta name="description" content="Portfolio of Manohar Soni — Frontend Developer">
+
+  <!-- Google Font (optional) -->
+  <link href="./Manohar Soni — Portfolio_files/css2" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #fbf7ee;
+      --card: #fff8f0;
+      --muted: #6b6b6b;
+      --accent: #2f9af3;
+      --accent-2: #29b07f;
+      --text: #132017;
+      --glass: rgba(0,0,0,0.04);
+      --radius: 14px;
+      --max-width: 900px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      justify-content:center;
+      padding:28px 16px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .brand{font-weight:700; font-size:20px; color:var(--accent)}
+    .nav-actions{display:flex; gap:10px; align-items:center}
+    .btn{
+      padding:10px 16px;
+      border-radius:10px;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .btn-primary{background:var(--accent); color:white; box-shadow:0 6px 14px rgba(47,154,243,0.15)}
+    .btn-ghost{background:transparent; border:1px solid rgba(0,0,0,0.06); color:var(--text)}
+
+    /* Hero */
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6));
+      padding:26px;
+      border-radius:var(--radius);
+      display:flex;
+      gap:24px;
+      align-items:center;
+      box-shadow: 0 6px 18px rgba(14,12,10,0.04);
+      margin-bottom:20px;
+    }
+    .hero-left{flex:1}
+    .title{
+      font-size:32px;
+      margin:0 0 6px 0;
+      line-height:1.02;
+    }
+    .title .name{background:linear-gradient(90deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; color:transparent; font-weight:800}
+    .subtitle{margin:8px 0 18px 0; color:var(--muted); max-width:54ch}
+    .hero-buttons{display:flex; gap:12px; flex-wrap:wrap}
+
+    /* avatar */
+    .avatar{
+      width:140px;
+      height:140px;
+      border-radius:999px;
+      border:6px solid #cfe9ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      background:linear-gradient(180deg,#fff,#f7fbff);
+      box-shadow:0 8px 20px rgba(47,154,243,0.06);
+      flex-shrink:0;
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover}
+
+    /* sections */
+    section{margin-bottom:18px}
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 8px 20px var(--glass);
+    }
+    h2{margin:0 0 12px 0; font-size:22px}
+    p{margin:0;color:var(--muted); line-height:1.6}
+
+    /* skills */
+    .skills-grid{display:grid; gap:12px}
+    .skill{
+      padding:14px;
+      border-radius:10px;
+      background:linear-gradient(180deg,#fff,#fcfbf7);
+    }
+    .skill-head{display:flex; align-items:center; gap:12px; margin-bottom:12px}
+    .skill-icon{width:56px; height:56px; border-radius:999px; background:#eaf4ff; display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--accent)}
+    .skill-name{font-weight:700}
+    .progress{
+      height:10px;
+      background:rgba(0,0,0,0.06);
+      border-radius:999px;
+      overflow:hidden;
+      margin-top:10px;
+    }
+    .progress > span{
+      display:block;
+      height:100%;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      width:0%;
+      border-radius:999px;
+      transition:width 1s ease;
+    }
+    .skill-meta{font-size:13px; color:var(--muted); margin-top:8px; text-align:center}
+
+    /* contact layout */
+    .contact-row{display:flex; gap:12px; flex-wrap:wrap}
+    .contact-item{display:flex; gap:12px; align-items:center}
+    .contact-icon{width:46px;height:46px;border-radius:10px;background:#eaf4ff;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+
+    /* form */
+    form{display:grid; gap:12px}
+    input, textarea{
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid rgba(0,0,0,0.06);
+      background:transparent;
+      font-size:14px;
+    }
+    textarea{min-height:100px; resize:vertical}
+
+    footer{color:var(--muted); font-size:13px; text-align:center; margin-top:14px}
+
+    /* responsive */
+    @media (max-width:760px){
+      .hero{flex-direction:column; align-items:flex-start}
+      .avatar{width:120px;height:120px}
+      .title{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">My Portfolio</div>
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="toggleTheme" title="toggle theme">🌙</button>
+        <button class="btn btn-ghost" onclick="scrollToSection(&#39;contact&#39;)">Contact</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero" role="region" aria-label="hero">
+      <div class="hero-left">
+        <h1 class="title">Hi, I'm <span class="name">Manohar Soni</span></h1>
+        <div style="font-weight:600; margin-bottom:8px">Frontend Developer</div>
+        <p class="subtitle">I design and build modern, responsive, and user-friendly web applications — focusing on clean UI, smooth interactions, and maintainable code.</p>
+
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="scrollToSection(&#39;contact&#39;)">Contact Me</button>
+          <button class="btn btn-ghost" onclick="scrollToSection(&#39;projects&#39;)">View My Work</button>
+        </div>
+      </div>
+
+      <!-- Avatar: replace the SVG with your <img src='your-photo.jpg' alt='Manohar Soni'> -->
+      <div class="avatar" aria-hidden="true">
+        <!-- Placeholder avatar (SVG with initials). To use your photo, replace this <svg> with:
+             <img src="path/to/your-photo.jpg" alt="Manohar Soni">
+        -->
+        <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profile placeholder">
+          <defs>
+            <lineargradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#cfe9ff"></stop>
+              <stop offset="1" stop-color="#f7fbff"></stop>
+            </lineargradient>
+          </defs>
+          <rect width="140" height="140" rx="140" fill="url(#g)"></rect>
+          <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-size="44" font-weight="700" font-family="Inter, Arial" fill="#2f9af3">MS</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>I am a dedicated frontend developer passionate about turning ideas into real, functional websites. I focus on writing clean, optimized code and designing interfaces that enhance user experience. Always learning and improving.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <div class="skills-grid" style="margin-top:12px">
+        <!-- HTML -->
+        <div class="skill card">
+          <div class="skill-head">
+            <div class="skill-icon" aria-hidden="true">HTML</div>
+            <div>
+              <div class="skill-name">HTML</div>
+              <div style="color:var(--muted);font-size:14px">Skilled in creating responsive web pages using semantic HTML</div>
+            </div>
+          </div>
+          <div class="progress" data-value="90"><span style="width: 90%;"></span></div>
+          <div class="skill-meta">90% Skill Level</div>
+        </div>
+
+        <!-- CSS -->
+        <div class="skill card">
+          <div class="skill-head">
+            <div class="skill-icon" aria-hidden="true">CSS</div>
+            <div>
+              <div class="skill-name">CSS</div>
+              <div style="color:var(--muted);font-size:14px">Experienced in styling websites and creating responsive layouts</div>
+            </div>
+          </div>
+          <div class="progress" data-value="85"><span style="width: 85%;"></span></div>
+          <div class="skill-meta">85% Skill Level</div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill card">
+          <div class="skill-head">
+            <div class="skill-icon" aria-hidden="true">JS</div>
+            <div>
+              <div class="skill-name">JavaScript</div>
+              <div style="color:var(--muted);font-size:14px">Adding interactivity and dynamic functionality</div>
+            </div>
+          </div>
+          <div class="progress" data-value="50"><span style="width: 50%;"></span></div>
+          <div class="skill-meta">50% Skill Level</div>
+        </div>
+
+        
+    </div></section>
+
+    <!-- PROJECTS (placeholder) -->
+    <section id="projects" class="card">
+      <h2>Featured Projects</h2>
+      <p style="margin-top:8px">Add 3–5 projects here with a short description, tech used, and a link to the live demo or GitHub repo.</p>
+      <ul style="margin:12px 0 0 18px; color:var(--muted)">
+        <li><strong>Portfolio Website</strong> — Built with HTML, CSS &amp; JS.</li>
+        <li><strong>Responsive Landing Page</strong> — Mobile-first design.</li>
+        <li><strong>To-Do App</strong> — JS + localStorage.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+
+      <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap; margin-bottom:12px">
+        <div style="flex:1; min-width:220px">
+          <div class="contact-item" style="margin-bottom:12px">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div style="font-weight:700">Email</div>
+              <div style="color:var(--muted)">manohar.soni@rungta</div>
+            </div>
+          </div>
+
+          <div class="contact-item" style="margin-bottom:12px">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div style="font-weight:700">Phone</div>
+              <div style="color:var(--muted)">6264486487</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div style="font-weight:700">Location</div>
+              <div style="color:var(--muted)">Raipur, Chhattisgarh</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:1; min-width:280px">
+          <form onsubmit="event.preventDefault(); alert(&#39;Thanks — message not actually sent (demo).&#39;);">
+            <label>
+              <div style="font-weight:700; margin-bottom:6px">Name</div>
+              <input type="text" placeholder="Your name" required="">
+            </label>
+            <label>
+              <div style="font-weight:700; margin-bottom:6px">Email</div>
+              <input type="email" placeholder="you@example.com" required="">
+            </label>
+            <label>
+              <div style="font-weight:700; margin-bottom:6px">Subject</div>
+              <input type="text" placeholder="Subject">
+            </label>
+            <label>
+              <div style="font-weight:700; margin-bottom:6px">Message</div>
+              <textarea placeholder="Write your message..."></textarea>
+            </label>
+            <div style="display:flex; gap:8px; margin-top:6px">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <button class="btn btn-ghost" type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer>© <span id="year">2025</span> Manohar Soni — Frontend Developer</footer>
+    </section>
+  </div>
+
+  <script>
+    // Fill year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Animate skill bars (reads data-value attribute)
+    function animateSkills(){
+      document.querySelectorAll('.progress').forEach(function(el){
+        const value = el.getAttribute('data-value') || 0;
+        const bar = el.querySelector('span');
+        // small timeout for nicer effect
+        setTimeout(()=> bar.style.width = value + '%', 80);
+      });
+    }
+    // Smooth scroll helper
+    function scrollToSection(id){
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+    // Theme toggle (very simple: invert background & text)
+    const toggleBtn = document.getElementById('toggleTheme');
+    toggleBtn.addEventListener('click', ()=>{
+      const root = document.documentElement;
+      if(root.style.getPropertyValue('--bg') === 'black'){
+        // revert
+        root.style.setProperty('--bg', '#fbf7ee');
+        root.style.setProperty('--card', '#fff8f0');
+        root.style.setProperty('--text', '#132017');
+        toggleBtn.textContent = '🌙';
+      } else {
+        root.style.setProperty('--bg', '#0f1720');
+        root.style.setProperty('--card', '#0b1320');
+        root.style.setProperty('--text', '#e6eef6');
+        toggleBtn.textContent = '☀️';
+      }
+    });
+
+    // Run animations after DOM loaded
+    document.addEventListener('DOMContentLoaded', function(){ animateSkills(); });
+  </script>
+
+</body></html>
